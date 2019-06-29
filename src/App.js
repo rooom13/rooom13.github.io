@@ -16,7 +16,7 @@ function App() {
 
           <div className="row">
             <div className="form-group col-md-12">
-              <p>Hi there!!! Servus!</p>
+              <p>Hi there!!! Servus! Hola!</p>
               <p>So this is supposed to be my personal page but seems like I'm building it 😅</p>
             </div>
           </div>
