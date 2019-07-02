@@ -33,7 +33,7 @@ function SideNavbar() {
               </a>
             </li>
             <li className="sidebar-dropdown">
-              <a href="#">
+              <a href="#Two">
                 <i className="fa"></i>
                 <span>Projects  </span>
               </a>
