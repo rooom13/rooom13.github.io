@@ -1,86 +1,90 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components'
-import SideNavbar from './components/SideNavbar';
-import './App.css';
-import { genericTypeAnnotation } from '@babel/types';
+import Navbar from './components/Navbar';
+import Introduction from './pages/Introduction'
+import Contact from './pages/Contact'
 
-function App() {
+class App extends Component {
 
-
-  return (
-
-    <Wrapper>
-
-      <NavWrapper>
-
-
-        <StyledNav>
-
-          <NavItem>Who I am</NavItem>
-          <NavItem>CV</NavItem>
-          <NavItem>Portfolio</NavItem>
-          <NavItem>Contact</NavItem>
-        </StyledNav>
-
-      </NavWrapper>
-
-      <h2 background>Román Rey Pedrero</h2>
-
-    </Wrapper>
-  )
-
-
-  return (
-    <div className="page-wrapper chiller-theme toggled">
-      <a id="show-sidebar" className="btn btn-sm btn-dark" href="#">
-        <i className="fas fa-bars"></i>
-      </a>
-      <SideNavbar />
-
-      <main className="page-content">
-        <div className="container-fluid">
-          <h2>Román Rey Pedrero</h2>
-
-          <div className="row">
-            <div className="form-group col-md-12" id="Welcome">
-              <p>Hi there!!! Servus! Hola!</p>
-              <p>So this is supposed to be my personal page but seems like I'm building it 😅</p>
-            </div>
-          </div>
+  state = {
+    isContactShown: false,
+    isCvShown: false,
+    isIntroductionShown: true,
+    isPortfolioShown: false
+  }
 
 
 
-        </div>
-      </main >
-    </div >
-  );
+  showContact = () => {
+    this.setState({
+      isContactShown: true,
+      isCvShown: false,
+      isIntroductionShown: false,
+      isPortfolioShown: false
+    })
+  }
+  showCv = ()   => {
+    this.setState({
+      isContactShown: false,
+      isCvShown: true,
+      isIntroductionShown: false,
+      isPortfolioShown: false
+    })
+  }
+  showPortfolio = ()   => {
+    this.setState({
+      isContactShown: false,
+      isCvShown: false,
+      isIntroductionShown: false,
+      isPortfolioShown: true
+    })
+  }
+  showIntroduction = ()   => {
+    this.setState({
+      isContactShown: false,
+      isCvShown: false,
+      isIntroductionShown: true,
+      isPortfolioShown: false
+    })
+  }
+  render() {
+
+    const { isContactShown, isCvShown, isIntroductionShown, isPortfolioShown } = this.state
+
+    return (
+
+      <Wrapper>
+        <Navbar 
+        isContactShown={isContactShown}
+        isCvShown={isCvShown}
+        isIntroductionShown={isIntroductionShown}
+        isPortfolioShown={isPortfolioShown}
+
+        showContact={this.showContact} 
+        showCv={this.showCv}
+        showPortfolio={this.showPortfolio}
+        showIntroduction={this.showIntroduction} />
+        <ContentWrapper>
+          <Content>
+            {isIntroductionShown && <Introduction />}
+            {isContactShown && <Contact />}
+          </Content>
+        </ContentWrapper>
+      </Wrapper>
+    )
+  }
 }
 
 
-const NavWrapper = styled.div`
-  width: 100%;
-
+const Content = styled.section`
+  margin: 1rem;
+  width: 800px;
 `
 
-
-const StyledNav = styled.nav`
-  margin-top: 5rem;  
+const ContentWrapper = styled.div`
   display: flex;
   justify-content: center;
-`
-
-const NavItem = styled.a`
-  cursor:pointer;
-  padding: 0.8rem;
-  font-size: 1.2rem;
-  border-bottom: 2px solid black;
   
-  &:hover {
-    border-bottom: 2px solid white;
-  }
-  &:focus {
-    font-style: italic;
-  }
 `
 
 const Wrapper = styled.div`

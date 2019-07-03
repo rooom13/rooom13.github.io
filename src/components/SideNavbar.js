@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
 
-import '../App.css';
 import ProfilePic from '../images/profile.png'
 
 function SideNavbar() {
