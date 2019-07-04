@@ -15,7 +15,7 @@ function Introduction() {
 
                 <div> I'm <BigName>Román Rey Pedrero</BigName></div>
                 <span>a computer science & engineering student from Barcelona based in Munich who loves all the science behind <CoolTopic>Cognitive Systems</CoolTopic> such as <CoolTopic>Machine Learning, Natural Language Processing, Computer Vision and Artificial Intelligence 🤖</CoolTopic></span>
-                <p>I aswell have a developer soul wich encourages me to be a self lerner and carry out my personal projects to discover new paths.</p>
+                <p>I aswell have a developer soul wich encourages me to be a self learner and carry out my personal projects to discover new paths.</p>
             </span>
 
             {<ProfilePicTablet isNotMobile src={profilePicPath} />}
@@ -67,6 +67,7 @@ const ProfilePicTablet = styled.img`
   ${media.tablet`
     display: block;
     width: 16rem;
+    heihgt: 16rem;
     border-radius: 50%; 
     padding: 0.5rem;
     border: 1px solid;

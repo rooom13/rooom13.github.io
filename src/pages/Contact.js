@@ -20,7 +20,7 @@ export default function Contact() {
     <Wrapper>
       <p>Let's have a talk!</p>
       <ButtonsWrapper>
-        <ContactButton iconClass={mailClass }link={mailLink}>romanrepedrero@gmail.com</ContactButton>
+        <ContactButton iconClass={mailClass }link={mailLink}>romanreypedrero@gmail.com</ContactButton>
         <ContactButton iconClass={linkedinClass} link={linkedinLink} >linkedin.com/in/roman-rey-pedrero</ContactButton>
         <ContactButton iconClass={githubClass} link={githubLink} target="_blank" title="GitHub has no chat but you can see my projects there!">github.com/rooom13  </ContactButton>
       </ButtonsWrapper>
