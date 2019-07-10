@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
-import Navbar from './components/Navbar';
-import Introduction from './pages/Introduction'
-import Contact from './pages/Contact'
+import Navbar from './components/Navbar/';
+import IntroductionPage from './pages/IntroductionPage'
+import ContactPage from './pages/ContactPage'
+import CVPage from './pages/CVPage'
+import media from './media'
 
 class App extends Component {
 
   state = {
-    isContactShown: false,
-    isCvShown: false,
     isIntroductionShown: true,
-    isPortfolioShown: false
+    isCVShown: false,
+    isPortfolioShown: false,
+    isContactShown: false,
   }
 
 
@@ -18,56 +20,57 @@ class App extends Component {
   showContact = () => {
     this.setState({
       isContactShown: true,
-      isCvShown: false,
+      isCVShown: false,
       isIntroductionShown: false,
       isPortfolioShown: false
     })
   }
-  showCv = ()   => {
+  showCv = () => {
     this.setState({
       isContactShown: false,
-      isCvShown: true,
+      isCVShown: true,
       isIntroductionShown: false,
       isPortfolioShown: false
     })
   }
-  showPortfolio = ()   => {
+  showPortfolio = () => {
     this.setState({
       isContactShown: false,
-      isCvShown: false,
+      isCVShown: false,
       isIntroductionShown: false,
       isPortfolioShown: true
     })
   }
-  showIntroduction = ()   => {
+  showIntroduction = () => {
     this.setState({
       isContactShown: false,
-      isCvShown: false,
+      isCVShown: false,
       isIntroductionShown: true,
       isPortfolioShown: false
     })
   }
   render() {
 
-    const { isContactShown, isCvShown, isIntroductionShown, isPortfolioShown } = this.state
+    const { isContactShown, isCVShown, isIntroductionShown, isPortfolioShown } = this.state
 
     return (
 
       <Wrapper>
-        <Navbar 
-        isContactShown={isContactShown}
-        isCvShown={isCvShown}
-        isIntroductionShown={isIntroductionShown}
-        isPortfolioShown={isPortfolioShown}
+        <Navbar
+          isContactShown={isContactShown}
+          isCVShown={isCVShown}
+          isIntroductionShown={isIntroductionShown}
+          isPortfolioShown={isPortfolioShown}
 
-        showContact={this.showContact} 
-        showCv={this.showCv}
-        showPortfolio={this.showPortfolio}
-        showIntroduction={this.showIntroduction} />
+          showContact={this.showContact}
+          showCv={this.showCv}
+          showPortfolio={this.showPortfolio}
+          showIntroduction={this.showIntroduction} />
         <ContentWrapper>
           <Content>
-            {isIntroductionShown && <Introduction />}
-            {isContactShown && <Contact />}
+            {isIntroductionShown && <IntroductionPage />}
+            {isContactShown && <ContactPage />}
+            {isCVShown && <CVPage />}
           </Content>
         </ContentWrapper>
       </Wrapper>
@@ -78,6 +81,10 @@ class App extends Component {
 
 const Content = styled.section`
   margin: 1rem;
+  margin-top: 4rem;
+  ${media.tablet` 
+    margin-top: 11rem;
+  `}
   width: 800px;
 `
 

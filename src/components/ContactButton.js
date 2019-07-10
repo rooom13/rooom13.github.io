@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
-import media from '../media'
+// import media from '../media'
 
 export default function ContactButton(props) {
 
@@ -51,7 +51,7 @@ const StyledButton = styled.a`
   decoration: none; 
 
   margin-top: 1rem;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
   width: 7rem;
   height: 7rem;
   
