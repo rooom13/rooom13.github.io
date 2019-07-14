@@ -2,16 +2,17 @@ import React, { Component } from 'react';
 import styled from 'styled-components'
 import Navbar from './components/Navbar/';
 import IntroductionPage from './pages/IntroductionPage'
-import ContactPage from './pages/ContactPage'
 import CVPage from './pages/CVPage'
+import PortfolioPage from './pages/PortfolioPage'
+import ContactPage from './pages/ContactPage'
 import media from './media'
 
 class App extends Component {
 
   state = {
-    isIntroductionShown: true,
+    isIntroductionShown: false,
     isCVShown: false,
-    isPortfolioShown: false,
+    isPortfolioShown: true,
     isContactShown: false,
   }
 
@@ -57,20 +58,22 @@ class App extends Component {
 
       <Wrapper>
         <Navbar
-          isContactShown={isContactShown}
-          isCVShown={isCVShown}
           isIntroductionShown={isIntroductionShown}
+          isCVShown={isCVShown}
           isPortfolioShown={isPortfolioShown}
+          isContactShown={isContactShown}
 
-          showContact={this.showContact}
+          showIntroduction={this.showIntroduction}
           showCv={this.showCv}
           showPortfolio={this.showPortfolio}
-          showIntroduction={this.showIntroduction} />
+          showContact={this.showContact}
+        />
         <ContentWrapper>
           <Content>
             {isIntroductionShown && <IntroductionPage />}
-            {isContactShown && <ContactPage />}
             {isCVShown && <CVPage />}
+            {isPortfolioShown && <PortfolioPage />}
+            {isContactShown && <ContactPage />}
           </Content>
         </ContentWrapper>
       </Wrapper>
