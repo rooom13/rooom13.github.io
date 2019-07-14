@@ -46,20 +46,17 @@ class Navbar extends Component {
     drawCosineHelix = (ctx, t, CWIDTH, CHEIGHT) => {
 
         const size = 2
-        const gap = 5
-        const angularSpeed = 0.025
-        const amplitude = 1
+        const gap = 2
+        const angularSpeed = 0.015
+        const amplitude = 0.3
 
-        for (let i = 0; i < 50; ++i) {
+        for (let i = 0; i < 200; ++i) {
 
-            const color = i % 2 ? 'white' : 'red';
+            const color = i % 2 ? 'white' : 'blue';
             ctx.fillStyle = color
-            // ctx.fillStyle = 'white';
             let y = this.cosineY(amplitude * i, t, angularSpeed, i)
             ctx.fillRect(i * gap, CHEIGHT / 2 + y, size, size)
 
-            y = this.cosineY(amplitude * i, t, angularSpeed, i + 4)
-            ctx.fillRect(i * gap, CHEIGHT / 2 + y, size, size)
         }
     }
     drawCosineBar = (ctx, t, CWIDTH, CHEIGHT) => {
@@ -88,8 +85,8 @@ class Navbar extends Component {
         const { ctx, t, CWIDTH, CHEIGHT } = this
         ctx.clearRect(0, 0, CWIDTH, CHEIGHT)
 
-        // switch (this.props.animation) {
-        switch (0) {
+        switch (this.props.animation) {
+        // switch (0) {
             case 0:
                 this.drawCosineHelix(ctx, t, CWIDTH, CHEIGHT)
                 break;

@@ -23,8 +23,8 @@ class Navbar extends Component {
         <Animation animation={animation} id='left' />
         <StyledNav>
           <NavItem isSelected={isIntroductionShown} onClick={showIntroduction}>Who I am</NavItem>
-          <NavItem isSelected={isCvShown} onClick={showCv}>CV</NavItem>
-          <NavItem isSelected={isPortfolioShown} onClick={showPortfolio}>Portfolio</NavItem>
+          {/* <NavItem isSelected={isCvShown} onClick={showCv}>CV</NavItem> */}
+          {/* <NavItem isSelected={isPortfolioShown} onClick={showPortfolio}>Portfolio</NavItem> */}
           <NavItem isSelected={isContactShown} onClick={showContact}>Contact</NavItem>
         </StyledNav>
         <Animation animation={animation} inverted  id='right'/>

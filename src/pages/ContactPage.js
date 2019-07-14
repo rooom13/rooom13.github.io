@@ -6,7 +6,7 @@ import media from '../media'
 export default function ContactPage() {
   
   const mailLink = "mailto:romanreypedrero@gmail.com?subject=Your personal website is so cool&body=Hey Román how are you doing?"
-  const linkedinLink ="https://www.linkedin.com/in/roman-rey-pedrero"
+  const linkedinLink ="https://www.linkedin.com/in/roman-rey"
   const githubLink = "https://www.github.com/rooom13"
 
   const mailClass = "fa fa-envelope-o fa-4x"
@@ -21,7 +21,7 @@ export default function ContactPage() {
       <p>Let's have a talk!</p>
       <ButtonsWrapper>
         <ContactButton iconClass={mailClass }link={mailLink}>romanreypedrero@gmail.com</ContactButton>
-        <ContactButton iconClass={linkedinClass} link={linkedinLink} >linkedin.com/in/roman-rey-pedrero</ContactButton>
+        <ContactButton iconClass={linkedinClass} link={linkedinLink} >linkedin.com/in/roman-rey</ContactButton>
         <ContactButton iconClass={githubClass} link={githubLink} target="_blank" title="GitHub has no chat but you can see my projects there!">github.com/rooom13  </ContactButton>
       </ButtonsWrapper>
     </Wrapper>
