@@ -103,7 +103,7 @@ class Navbar extends Component {
 
         }
 
-
+        
         requestAnimationFrame(this.animate)
     }
 
@@ -122,6 +122,7 @@ class Navbar extends Component {
 }
 
 const StyledCanvas = styled.canvas`
+    /* If performance drops --> Use react-media */
     display: none;
 
     ${media.tablet`
