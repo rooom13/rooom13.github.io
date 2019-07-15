@@ -7,7 +7,6 @@ export default function () {
 
         <Wrapper >
 
-            <div><b>Skills:</b></div>
 
             <TimeLineWrapper>
             <Timeline >
@@ -73,10 +72,20 @@ const Content = styled.div`
 `
 
 const Container = styled.div`
-    padding: 10px 40px;
+    margin-top: 1rem;
+    z-index: 0;
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+    
+    ${media.tablet`
+        margin-top: 0;
+        width: 50%;
+        padding: 10px 40px;
+    `}
+
     position: relative;
     background-color: inherit;
-    width: 50%;
 
     &:after {
         content: '';
@@ -85,16 +94,20 @@ const Container = styled.div`
         height: 25px;
         right: -17px;
         background-color: white;
-        border: 4px solid #FF9F55;
+        border: 4px solid darkred;
         top: 15px;
         border-radius: 50%;
         z-index: 1;
     }
 `
 const ContainerRight = styled(Container)`
-    left: 50%;
+    left: 0%;
+     ${media.tablet`
+        left: 50%;
+     `}
+    
 
-    &::before {
+    &:before {
         content: " ";
         height: 0;
         position: absolute;
@@ -108,28 +121,42 @@ const ContainerRight = styled(Container)`
     }
 
     &:after {
-        left: -16px;
-
+        left: 15px;
+        ${media.tablet`
+            left: -16px;
+        `}
     }
 `
 
 const ContainerLeft = styled(Container)`
     left: 0%;
     
+
     &:before {
-        
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
         content: " ";
         height: 0;
         position: absolute;
         top: 22px;
         width: 0;
-        /* z-index: 1; */
         right: 30px;
-        border: medium solid white;
-        border-width: 10px 0 10px 10px;
-        border-color: transparent transparent transparent white;
+
+        ${media.tablet`                
+            left: unset;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent white;
+        `}
     }
 
+    &:after {
+        left: 15px;
+        ${media.tablet`
+            left: unset;
+        `}
+    }
 `
 
 
@@ -146,13 +173,13 @@ const Timeline = styled.div`
     background-color: white;
     top: 0;
     bottom: 0;
-    left: 50%;
+    left: 31px;
     margin-left: -3px;
     
-    // ${media.tablet`
-    //     left: 50%;
-    // `}
-
+    ${media.tablet`
+        left: 50%;
+    `}
+    
     }
 `
 
