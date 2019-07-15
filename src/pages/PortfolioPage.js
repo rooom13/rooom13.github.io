@@ -13,40 +13,40 @@ export default function () {
 
             <Timeline>
                 <ContainerLeft >
-                    <div class="content">
+                    <Content>
                         <h2>2017</h2>
                         <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-                    </div>
+                    </Content>
                 </ContainerLeft>
                 <ContainerRight >
-                    <div class="content">
+                    <Content>
                         <h2>2016</h2>
                         <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-                    </div>
+                    </Content>
                 </ContainerRight>
                 <ContainerLeft >
-                    <div class="content">
+                    <Content>
                         <h2>2015</h2>
                         <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-                    </div>
+                    </Content>
                 </ContainerLeft>
                 <ContainerRight >
-                    <div class="content">
+                    <Content>
                         <h2>2012</h2>
                         <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-                    </div>
+                    </Content>
                 </ContainerRight>
                 <ContainerLeft >
-                    <div class="content">
+                    <Content>
                         <h2>2011</h2>
                         <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-                    </div>
+                    </Content>
                 </ContainerLeft>
                 <ContainerRight >
-                    <div class="content">
+                    <Content>
                         <h2>2007</h2>
                         <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-                    </div>
+                    </Content>
                 </ContainerRight>
             </Timeline>
 
@@ -58,9 +58,17 @@ export default function () {
 }
 
 
+const Content = styled.div`
+    padding: 20px 30px;
+    background-color: darkgrey;
+    position: relative;
+    border-radius: 6px;
+
+
+`
 
 const Container = styled.div`
-padding: 10px 40px;
+    padding: 10px 40px;
     position: relative;
     background-color: inherit;
     width: 50%;
@@ -78,7 +86,14 @@ padding: 10px 40px;
     z-index: 1;
 `
 const ContainerRight = styled(Container)`
-        left: 50%;
+    left: 50%;
+    background-color: red;
+`
+
+const ContainerLeft = styled(Container)`
+    left: 0%;
+    background-color: blue;
+        
 `
 
 

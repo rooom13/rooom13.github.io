@@ -16,6 +16,7 @@ function IntroductionPage() {
                 <div> I'm <BigName>Román Rey Pedrero</BigName></div>
                 <span>a computer science & engineering student from Barcelona based in Munich who loves all the science behind <CoolTopic>Cognitive Systems</CoolTopic> such as <CoolTopic>Machine Learning, Natural Language Processing, Computer Vision and Artificial Intelligence <span aria-label={'robot'}role={'img'}>🤖</span></CoolTopic></span>
                 <p>I as well have a developer soul wich encourages me to be a self learner and carry out my personal projects to discover new paths.</p>
+          <div><i><b>*** Please note that I'm still developing this website :) *** </b></i></div>
             </span>
 
             {<ProfilePicTablet isNotMobile src={profilePicPath} />}

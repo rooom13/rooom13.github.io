@@ -1,18 +1,16 @@
 import React from 'react';
 import styled from 'styled-components'
-// import media from '../media'
+import Link from '../components/Link'
+import CVen_path from '../CV/CV_RomanRey_en.pdf'
 
 function CVPage() {
     return (
 
         <Wrapper >
         
-        <div><b>Skills:</b></div>
-        <ul>
-            <li>Making things public when they are not finished yer like this page</li>
-            <li>a</li>
-            <li>a</li>
-            </ul>
+        <div><i>Check and download a <b>PDF version</b> of my CV <Link href={CVen_path}>here!</Link></i></div>
+        
+     
  
       
 

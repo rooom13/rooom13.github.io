@@ -29,7 +29,7 @@ class Navbar extends Component {
 
         const size = 2
         const gap = 5
-        const angularSpeed = 0.025
+        const angularSpeed = 0.015
         const amplitude = 1
 
         for (let i = 0; i < 50; ++i) {
@@ -63,7 +63,7 @@ class Navbar extends Component {
 
         const size = 2
         const gap = 5
-        const angularSpeed = 0.025
+        const angularSpeed = 0.015
         const amplitude = 1
 
         for (let i = 0; i < 50; ++i) {
