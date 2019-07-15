@@ -9,9 +9,50 @@ export default function () {
 
             <div><b>Skills:</b></div>
 
+            <TimeLineWrapper>
+            <Timeline >
+                <ContainerLeft class="left">
+                    <Content >
+                        <h2>2017</h2>
+                        <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+                    </Content>
+                </ContainerLeft>
+                <ContainerRight class=" right">
+                    <Content >
+                        <h2>2016</h2>
+                        <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+                    </Content>
+                </ContainerRight>
+                <ContainerLeft class=" left">
+                    <Content >
+                        <h2>2015</h2>
+                        <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+                    </Content>
+                </ContainerLeft>
+                <ContainerRight class=" right">
+                    <Content >
+                        <h2>2012</h2>
+                        <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+                    </Content>
+                </ContainerRight>
+                <ContainerLeft class=" left">
+                    <Content >
+                        <h2>2011</h2>
+                        <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+                    </Content>
+                </ContainerLeft>
+                <ContainerRight class=" right">
+                    <Content >
+                        <h2>2007</h2>
+                        <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+                    </Content>
+                </ContainerRight>
+            </Timeline>
+            </TimeLineWrapper>
 
 
-            <Timeline>
+
+            {/* <Timeline>
                 <ContainerLeft >
                     <Content>
                         <h2>2017</h2>
@@ -48,7 +89,7 @@ export default function () {
                         <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
                     </Content>
                 </ContainerRight>
-            </Timeline>
+            </Timeline> */}
 
 
 
@@ -57,6 +98,9 @@ export default function () {
     )
 }
 
+const TimeLineWrapper = styled.div`
+    position: ;
+`
 
 const Content = styled.div`
     padding: 20px 30px;
@@ -86,19 +130,19 @@ const Container = styled.div`
     z-index: 1;
 `
 const ContainerRight = styled(Container)`
-    left: 50%;
-    background-color: red;
+    // left: 50%;
+    // background-color: red;
 `
 
 const ContainerLeft = styled(Container)`
-    left: 0%;
-    background-color: blue;
-        
+    // left: 0%;
+    // background-color: blue;
+
 `
 
 
 const Timeline = styled.div`
-position: relative;
+    position: relative;
     max-width: 1200px;
     margin: 0 auto;
 
@@ -116,7 +160,8 @@ position: relative;
 
 
 const Wrapper = styled.div`
-  line-height: 1.5
+    display: flex;
+    line-height: 1.5
   `
 
 

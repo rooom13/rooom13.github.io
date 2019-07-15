@@ -10,9 +10,9 @@ import media from './media'
 class App extends Component {
 
   state = {
-    isIntroductionShown: true,
+    isIntroductionShown: false,
     isCVShown: false,
-    isPortfolioShown: false,
+    isPortfolioShown: true,
     isContactShown: false,
   }
 

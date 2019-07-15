@@ -35,13 +35,14 @@ class Navbar extends Component {
 }
 
 const Wrapper = styled.div`
+  z-index: 1;
   display: flex;
   position: fixed;
   width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
 `
 const StyledNav = styled.nav`
 width: 100%;
-background-color: rgba(0, 0, 0, 0.9);
 
 ${media.tablet`
   margin-top: 8rem;  
