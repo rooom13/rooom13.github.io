@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 import media from '../media'
+import { BUTTONCOLOR, FONTCOLOR } from '../Colors';
 
 export default function () {
 
@@ -39,8 +40,8 @@ export default function () {
             </ContainerLeft>
             <ContainerRight >
                 <Content >
-                    <h2>2007</h2>
-                    <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+                    <h2>Mathic Platformer2013</h2>
+                    <p>Web app videogame Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
                 </Content>
             </ContainerRight>
         </Timeline>
@@ -52,12 +53,19 @@ export default function () {
 const Content = styled.div`
 
     padding: 1rem;
-    background-color: darkgrey;
+    // background-color: ${'N'};
     border-radius: 10px;
-`
+    `
 
 const Container = styled.div`
-box-sizing: border-box;
+
+    > div {
+        border-left: 1px solid;
+        border-bottom: 1px solid;
+    }
+
+
+    box-sizing: border-box;
 
     z-index: 0;
     margin-top: 1rem;
@@ -80,7 +88,7 @@ box-sizing: border-box;
         width: 1.5rem;
         height: 1.5rem;
         right: -1rem;
-        background-color: white;
+        background-color: ${FONTCOLOR};
         border: 4px solid darkred;
         top: 15px;
         border-radius: 50%;
@@ -98,7 +106,7 @@ const ContainerRight = styled(Container)`
         left: 60px;
         border: medium solid;
         border-width: 10px 10px 10px 0;
-        border-color: transparent white transparent transparent;
+        border-color: transparent ${FONTCOLOR} transparent transparent;
     }
     
     &:after {
@@ -106,6 +114,9 @@ const ContainerRight = styled(Container)`
     }
     
     ${media.tablet`
+
+    
+
         left: 50%;
         &:before {
             left: 30px;
@@ -122,7 +133,7 @@ const ContainerLeft = styled(Container)`
         left: 60px;
         border: medium solid;
         border-width: 10px 10px 10px 0;
-        border-color: transparent white transparent transparent;
+        border-color: transparent ${FONTCOLOR} transparent transparent;
         content: " ";
         height: 0;
         position: absolute;
@@ -136,10 +147,15 @@ const ContainerLeft = styled(Container)`
     }
     
     ${media.tablet`
+
+        > div {
+            border-left: none;
+            border-right: 1px solid;
+        }
         &:before {
             left: unset;
             border-width: 10px 0 10px 10px;
-            border-color: transparent transparent transparent white;
+            border-color: transparent transparent transparent ${FONTCOLOR};
         }
         &:after {
             left: unset;
@@ -152,12 +168,13 @@ const Timeline = styled.div`
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
+    
 
     &:after {
         content: '';
         position: absolute;
         width: 6px;
-        background-color: white;
+        border-left: 5px dashed;
         top: 0;
         bottom: 0;
         left: 31px;

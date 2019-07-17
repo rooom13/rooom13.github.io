@@ -21,7 +21,7 @@ function CVPage() {
 
 
 const Wrapper = styled.div`
-  line-height: 1.5
+  line-height: 1.5;
   `
 
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 import Link from './Link'
+import { FONTCOLOR, BUTTONCOLOR, BUTTONHOVERCOLOR, BUTTONACTIVECOLOR } from '../Colors';
 
 export default function ContactButton(props) {
 
@@ -30,13 +31,13 @@ const StyledButton = styled.a`
     justify-content:center;
     align-items: center;
 
-    >i {color: white;}
-    background-color: #2d2d2d;
+    >i {color: ${FONTCOLOR};}
+    background-color: ${BUTTONCOLOR};
     &:hover{
-        background-color: #4e4e4e;
+        background-color: ${BUTTONHOVERCOLOR};
     }
     &:active{
-        background-color: #151515;
+        background-color: ${BUTTONACTIVECOLOR};
     }
 
     border-radius: 25px;

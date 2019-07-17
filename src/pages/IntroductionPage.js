@@ -33,15 +33,13 @@ const CoolTopic = styled.span`
 const Wrapper = styled.div`
   display: flex;
   line-height: 1.5
-  `
+`
 
 
 const BigName = styled.b`
-  
   font-size: 1.5rem;
-  
   ${media.tablet`
-  font-size: 3rem;
+    font-size: 3rem;
   `}
   `
 
@@ -62,7 +60,7 @@ const ProfilePicMobile = styled.img`
   ${media.tablet`
     display:none;
   `}
-  `
+`
 const ProfilePicTablet = styled.img`
   display: none;
   ${media.tablet`
@@ -74,7 +72,6 @@ const ProfilePicTablet = styled.img`
     border: 1px solid;
     margin: 1rem;
   `}
-  
 `
 
 export default IntroductionPage

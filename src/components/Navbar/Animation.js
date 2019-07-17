@@ -133,7 +133,4 @@ const StyledCanvas = styled.canvas`
 
 `
 
-
-
-
 export default Navbar

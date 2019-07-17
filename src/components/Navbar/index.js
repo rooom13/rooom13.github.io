@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components'
 import media from '../../media'
 import Animation from './Animation'
+import { FONTCOLOR, BUTTONCOLOR, BACKGROUNDCOLOR } from '../../Colors';
 
 class Navbar extends Component {
 
@@ -56,14 +57,15 @@ const NavItem = styled.div`
   cursor:pointer;
   padding: 0.8rem;
   font-size: 1.2rem;
-  border-bottom: 2px solid black;
+   border-bottom: 2px solid ${BACKGROUNDCOLOR};
+
   
   ${(props) => props.isSelected && `
     font-style: italic;
-    border-bottom: 2px solid grey;
+    border-bottom: 2px solid ${BUTTONCOLOR};
   `};
   &:hover {
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid ${FONTCOLOR};
   }
 
   }

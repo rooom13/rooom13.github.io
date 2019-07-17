@@ -16,6 +16,6 @@ export default function () {
 const Wrapper = styled.div`
     display: flex;
     line-height: 1.5
-  `
+`
 
 

@@ -1,12 +1,13 @@
 
 import styled from 'styled-components'
+import { VISITEDLINKCOLOR, FONTCOLOR } from '../Colors';
 
 export default styled.a`
   font-family: monospace;
 
-  color: white;
+  color: ${FONTCOLOR};
   &:visited {
-      color: #b57cff;
+      color: ${VISITEDLINKCOLOR};
   }
 
 `

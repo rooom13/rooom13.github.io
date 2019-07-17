@@ -6,6 +6,7 @@ import CVPage from './pages/CVPage'
 import PortfolioPage from './pages/PortfolioPage'
 import ContactPage from './pages/ContactPage'
 import media from './media'
+import {FONTCOLOR} from './Colors'
 
 class App extends Component {
 
@@ -94,12 +95,10 @@ const Content = styled.section`
 const ContentWrapper = styled.div`
   display: flex;
   justify-content: center;
-  
 `
 
 const Wrapper = styled.div`
-  color: white;
-  
+  color: ${FONTCOLOR};
 `
 
 export default App;
