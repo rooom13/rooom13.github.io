@@ -5,42 +5,48 @@ import { BUTTONCOLOR, FONTCOLOR } from '../Colors';
 
 export default function () {
 
+    const items = ['asdas','dasda']
+
+
     return (
 
+
+        
+
         <Timeline >
-            <ContainerLeft>
+            <ContainerLeft >
                 <Content >
-                    <h2>2017</h2>
+                    <h2>Recommendation Systems Thesis 2019</h2>
                     <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
                 </Content>
             </ContainerLeft>
             <ContainerRight >
                 <Content >
-                    <h2>2016</h2>
+                    <h2>@dailyWord_bot 2018</h2>
                     <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
                 </Content>
             </ContainerRight>
             <ContainerLeft >
                 <Content >
-                    <h2>2015</h2>
+                    <h2>Visual In the Universe 2018</h2>
                     <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
                 </Content>
             </ContainerLeft>
             <ContainerRight >
                 <Content >
-                    <h2>2012</h2>
+                    <h2>Mathic Runner 2014</h2>
                     <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
                 </Content>
-            </ContainerRight>
+                </ContainerRight>
             <ContainerLeft >
                 <Content >
-                    <h2>2011</h2>
-                    <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+                    <h2>Mathic Platformer 2013</h2>
+                    <p>Web app videogame Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
                 </Content>
             </ContainerLeft>
             <ContainerRight >
                 <Content >
-                    <h2>Mathic Platformer2013</h2>
+                    <h2>Animations - Time ago</h2>
                     <p>Web app videogame Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
                 </Content>
             </ContainerRight>
@@ -51,19 +57,16 @@ export default function () {
 
 
 const Content = styled.div`
-
     padding: 1rem;
     // background-color: ${'N'};
     border-radius: 10px;
-    `
+`
 
 const Container = styled.div`
-
     > div {
         border-left: 1px solid;
         border-bottom: 1px solid;
     }
-
 
     box-sizing: border-box;
 
@@ -74,7 +77,6 @@ const Container = styled.div`
     padding-right: 25px;
     position: relative;
     left: 0%;
-
 
     ${media.tablet`
         margin-top: 0;
@@ -96,7 +98,6 @@ const Container = styled.div`
     }
 `
 const ContainerRight = styled(Container)`
-
     &:before {
         content: " ";
         height: 0;
@@ -114,9 +115,6 @@ const ContainerRight = styled(Container)`
     }
     
     ${media.tablet`
-
-    
-
         left: 50%;
         &:before {
             left: 30px;
@@ -128,7 +126,6 @@ const ContainerRight = styled(Container)`
 `
 
 const ContainerLeft = styled(Container)`
-
     &:before {
         left: 60px;
         border: medium solid;
@@ -169,7 +166,6 @@ const Timeline = styled.div`
     max-width: 1200px;
     margin: 0 auto;
     
-
     &:after {
         content: '';
         position: absolute;

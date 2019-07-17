@@ -18,7 +18,6 @@ class Navbar extends Component {
 
         requestAnimationFrame(this.animate)
 
-
     }
     animate = () => {
         this.draw()
@@ -59,6 +58,7 @@ class Navbar extends Component {
 
         }
     }
+ 
     drawCosineBar = (ctx, t, CWIDTH, CHEIGHT) => {
 
         const size = 2
@@ -74,6 +74,26 @@ class Navbar extends Component {
         }
     }
 
+    drawNew = (ctx, t, CWIDTH, CHEIGHT) => {
+
+        const size = 2
+        const gap = 5
+        const angularSpeed = 0.05   
+        const amplitude = 0.3
+
+        const color = 'white';
+        ctx.fillStyle = color
+        for (let i = 0; i < 50; ++i) {
+
+            let y = i
+            ctx.fillRect(i * gap, CHEIGHT / 2 + y, size, size)
+            
+          
+            ctx.fillRect(i * gap, CHEIGHT / 2  - y, size, size)
+
+        }
+    }
+
     cosineY = (A, t, w, phi) => {
         return A * Math.cos(t * w + phi)
     }
@@ -85,8 +105,8 @@ class Navbar extends Component {
         const { ctx, t, CWIDTH, CHEIGHT } = this
         ctx.clearRect(0, 0, CWIDTH, CHEIGHT)
 
-        switch (this.props.animation) {
-        // switch (0) {
+        // switch (this.props.animation) {
+        switch (3) {
             case 0:
                 this.drawCosineHelix(ctx, t, CWIDTH, CHEIGHT)
                 break;
@@ -96,9 +116,8 @@ class Navbar extends Component {
             case 2:
                 this.draw3DHelix(ctx, t, CWIDTH, CHEIGHT)
                 break;
-            default:
-                this.drawCosineHelix(ctx, t, CWIDTH, CHEIGHT)
-                this.drawCosineBar(ctx, t, CWIDTH, CHEIGHT)
+            case 3:
+                this.drawNew(ctx, t, CWIDTH, CHEIGHT)
                 break;
 
         }
@@ -109,13 +128,9 @@ class Navbar extends Component {
 
 
     render() {
-
         const { inverted } = this.props
-
         return (
-
             <StyledCanvas id={this.props.id} inverted={inverted} />
-
         )
     }
 

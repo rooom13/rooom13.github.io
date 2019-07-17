@@ -54,7 +54,6 @@ class App extends Component {
   render() {
 
     const { isContactShown, isCVShown, isIntroductionShown, isPortfolioShown } = this.state
-
     return (
 
       <Wrapper>
