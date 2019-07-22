@@ -21,7 +21,7 @@ export default function ContactPage() {
       <p>Let's have a talk!</p>
       <ButtonsWrapper>
         <ContactButton iconClass={mailClass }link={mailLink}>romanreypedrero@gmail.com</ContactButton>
-        <ContactButton iconClass={linkedinClass} link={linkedinLink} >linkedin.com/in/roman-rey</ContactButton>
+        <ContactButton iconClass={linkedinClass} link={linkedinLink} target="_blank" >linkedin.com/in/roman-rey</ContactButton>
         <ContactButton iconClass={githubClass} link={githubLink} target="_blank" title="GitHub has no chat but you can see my projects there!">github.com/rooom13  </ContactButton>
       </ButtonsWrapper>
     </Wrapper>

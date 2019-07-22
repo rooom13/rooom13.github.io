@@ -1,53 +1,77 @@
 import React from 'react';
 import styled from 'styled-components'
 import media from '../media'
-import { BUTTONCOLOR, FONTCOLOR } from '../Colors';
+import { BUTTONHOVERCOLOR, FONTCOLOR } from '../Colors';
+import Link from './Link'
 
 export default function () {
 
-    const items = ['asdas','dasda']
-
+    const thesisLink = 'https://github.com/rooom13/recommendation-system-thesis'
+    const botLink = 'https://github.com/rooom13/deutschlerne_bot'
+    const visualsLink = 'https://www.youtube.com/watch?v=jMQ0V9Dbbyg'
+    const runnerLink = 'http://www.genmagic.org/videojuegos/mates/mathicrunner'
+    const platformerLink = 'http://genmagic.org/videojuegos/mates/mathicplatformer1'
+    const animationsLink = 'https://www.youtube.com/playlist?list=PLZIKq90MlT8IbjRKOPOjL2AZSRRrWApLI'
 
     return (
 
 
-        
-
         <Timeline >
             <ContainerLeft >
                 <Content >
-                    <h2>Recommendation Systems Thesis 2019</h2>
-                    <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+                    <h2><Link href={thesisLink} >Recommendation Systems Thesis</Link> | 2019</h2>
+                    <div>
+                        Thesis about <b>Recommendation Systems</b>. In this thesis a deep evaluation of a collaborative filtering method, conten-based method and hybrid approach has been carry out.
+                        </div>
                 </Content>
             </ContainerLeft>
             <ContainerRight >
                 <Content >
-                    <h2>@dailyWord_bot 2018</h2>
-                    <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+                    <h2><Link href={botLink}> @dailyWord_bot</Link> | 2018</h2>
+                    <div>
+                        Telegram Bot to help Spanish speakers learn German & vice-versa developed using <b>Node.js</b> and <b>Redis</b>.
+                        <p>Deployed using <b>Cloud Computing</b> techniques with <b>Docker</b> as a container platform.</p>
+                    </div>
+
                 </Content>
             </ContainerRight>
             <ContainerLeft >
                 <Content >
-                    <h2>Visual In the Universe 2018</h2>
-                    <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+                    <h2><Link href={visualsLink}>"In the Universe" visuals</Link> | 2018</h2>
+                    <p> Lyric visuals for the videoclip of "In the Universe" song. The visuals were developed using Javascript's canvas with the challenge of synchronizing the audio, lyrics and visual effects.
+                        </p>
+                    <StyledIframe
+                        src={'https://www.youtube.com/embed/jMQ0V9Dbbyg'}
+                        frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                    />
                 </Content>
             </ContainerLeft>
             <ContainerRight >
                 <Content >
-                    <h2>Mathic Runner 2014</h2>
-                    <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+                    <h2> <Link href={runnerLink}>Mathic Runner</Link> | 2014</h2>
+                    <p>Web responsive videogame developed for <i>genmagic.net</i>an educational platform of research and development of interactive applications.</p>
                 </Content>
-                </ContainerRight>
+            </ContainerRight>
             <ContainerLeft >
                 <Content >
-                    <h2>Mathic Platformer 2013</h2>
-                    <p>Web app videogame Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+                    <h2><Link href={platformerLink}>Mathic Platformer</Link> | 2013</h2>
+                    <p>Web app videogame for a research project that approaches education and gamification.
+                        </p>
                 </Content>
             </ContainerLeft>
             <ContainerRight >
                 <Content >
-                    <h2>Animations - Time ago</h2>
-                    <p>Web app videogame Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+                    <h2><Link href={animationsLink}>Animations</Link> | Time ago</h2>
+                    <p> At an early age I spent my time doing animations using <b>Adobe Flash</b>.
+                    <StyledIframe
+                            src="https://www.youtube.com/embed/videoseries?list=PLZIKq90MlT8IbjRKOPOjL2AZSRRrWApLI"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                        />
+                    </p>
                 </Content>
             </ContainerRight>
         </Timeline>
@@ -55,10 +79,15 @@ export default function () {
 }
 
 
+const StyledIframe=styled.iframe`
+    border-radius: 5px;
+    width: 100%;
+`
 
+
+// Timeline stuff ---->
 const Content = styled.div`
     padding: 1rem;
-    // background-color: ${'N'};
     border-radius: 10px;
 `
 

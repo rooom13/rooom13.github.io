@@ -27,7 +27,7 @@ function IntroductionPage() {
 
 
 const CoolTopic = styled.span`
-  font-size:1.1rem;
+  // font-size:1rem;
   font-family: monospace;
 `
 const Wrapper = styled.div`

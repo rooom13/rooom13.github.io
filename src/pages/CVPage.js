@@ -8,7 +8,7 @@ function CVPage() {
 
         <Wrapper >
         
-        <div><i>Check and download a <b>PDF version</b> of my CV <Link href={CVen_path}>here!</Link></i></div>
+        <div><i>Check and download a <b>PDF version</b> of my CV <Link href={CVen_path} target="_blank" >here!</Link></i></div>
         
      
  

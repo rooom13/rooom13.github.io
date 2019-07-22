@@ -11,10 +11,15 @@ class Navbar extends Component {
         const canvas = document.querySelector(`#${this.props.id}`)
         this.ctx = canvas.getContext('2d')
 
+        this.canvasLeft = document.querySelector(`#left`)
+
+
         this.CWIDTH = canvas.width
         this.CHEIGHT = canvas.height
 
         this.t = 0
+
+        this.cumulativeValue = {0:0,1:0}
 
         requestAnimationFrame(this.animate)
 
@@ -58,7 +63,7 @@ class Navbar extends Component {
 
         }
     }
- 
+
     drawCosineBar = (ctx, t, CWIDTH, CHEIGHT) => {
 
         const size = 2
@@ -76,22 +81,30 @@ class Navbar extends Component {
 
     drawNew = (ctx, t, CWIDTH, CHEIGHT) => {
 
-        const size = 2
-        const gap = 5
-        const angularSpeed = 0.05   
-        const amplitude = 0.3
+        if (t > CWIDTH) return;
+
+       const size = 2
+ 
 
         const color = 'white';
         ctx.fillStyle = color
-        for (let i = 0; i < 50; ++i) {
 
-            let y = i
-            ctx.fillRect(i * gap, CHEIGHT / 2 + y, size, size)
-            
-          
-            ctx.fillRect(i * gap, CHEIGHT / 2  - y, size, size)
 
-        }
+        const rand = Math.random() * 4 - 2
+        const rand2 = Math.random() * 4 - 2
+        this.cumulativeValue[0] += rand
+        const y = this.cumulativeValue[0]
+        
+        this.cumulativeValue[1] += rand2
+        const y2 = this.cumulativeValue[1]
+
+        ctx.fillRect(t, CHEIGHT / 2 + y, size, size)
+        ctx.fillRect(t, CHEIGHT / 2 + y2, size, size)
+
+
+        ctx.fillRect(t, CHEIGHT / 2 - y, size, size)
+        ctx.fillRect(t, CHEIGHT / 2 - y2, size, size)
+
     }
 
     cosineY = (A, t, w, phi) => {
@@ -99,30 +112,42 @@ class Navbar extends Component {
     }
     draw = () => {
 
-
-        this.t++
-
         const { ctx, t, CWIDTH, CHEIGHT } = this
-        ctx.clearRect(0, 0, CWIDTH, CHEIGHT)
 
-        // switch (this.props.animation) {
-        switch (3) {
-            case 0:
-                this.drawCosineHelix(ctx, t, CWIDTH, CHEIGHT)
-                break;
-            case 1:
-                this.drawCosineBar(ctx, t, CWIDTH, CHEIGHT)
-                break;
-            case 2:
-                this.draw3DHelix(ctx, t, CWIDTH, CHEIGHT)
-                break;
-            case 3:
-                this.drawNew(ctx, t, CWIDTH, CHEIGHT)
-                break;
+        if (this.props.inverted) {
+            ctx.clearRect(0, 0, CWIDTH, CHEIGHT)
+            ctx.drawImage(this.canvasLeft, 0, 0)
 
+
+
+        } else {
+
+
+            this.t++
+
+
+            switch (this.props.animation) {
+            // switch (3) {
+                case 0:
+                    ctx.clearRect(0, 0, CWIDTH, CHEIGHT)
+                    this.drawCosineHelix(ctx, t, CWIDTH, CHEIGHT)
+                    break;
+                case 1:
+                    ctx.clearRect(0, 0, CWIDTH, CHEIGHT)
+                    this.drawCosineBar(ctx, t, CWIDTH, CHEIGHT)
+                    break;
+                case 2:
+                    ctx.clearRect(0, 0, CWIDTH, CHEIGHT)
+                    this.draw3DHelix(ctx, t, CWIDTH, CHEIGHT)
+                    break;
+                case 3:
+                    this.drawNew(ctx, t, CWIDTH, CHEIGHT)
+                    break;
+
+            }
         }
 
-        
+
         requestAnimationFrame(this.animate)
     }
 
