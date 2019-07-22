@@ -86,7 +86,7 @@ const Content = styled.section`
   margin: 1rem;
   margin-top: 4rem;
   ${media.tablet` 
-    margin-top: 11rem;
+    margin-top: 12rem;
   `}
   width: 800px;
 `

@@ -6,7 +6,7 @@ export default function () {
     return (
 
         <Wrapper >
-
+            <p/>
             <Timeline />
         </Wrapper>
     )
@@ -15,7 +15,7 @@ export default function () {
 
 const Wrapper = styled.div`
     display: flex;
-    line-height: 1.5
+    line-height: 1.5;
 `
 
 

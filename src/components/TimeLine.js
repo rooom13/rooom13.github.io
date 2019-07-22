@@ -63,7 +63,7 @@ export default function () {
             </ContainerLeft>
             <ContainerRight >
                 <Content >
-                    <h2><Link href={animationsLink}>Animations</Link> | Time ago</h2>
+                    <h2><Link href={animationsLink}>Animations</Link> | Long time ago</h2>
                     <p> At an early age I spent my time doing animations using <b>Adobe Flash</b>.
                     <StyledIframe
                             src="https://www.youtube.com/embed/videoseries?list=PLZIKq90MlT8IbjRKOPOjL2AZSRRrWApLI"
