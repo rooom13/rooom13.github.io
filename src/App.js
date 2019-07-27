@@ -11,8 +11,8 @@ import {FONTCOLOR} from './Colors'
 class App extends Component {
 
   state = {
-    isIntroductionShown: true,
-    isCVShown: false,
+    isIntroductionShown: false,
+    isCVShown: true,
     isPortfolioShown: false,
     isContactShown: false,
   }

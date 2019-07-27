@@ -128,6 +128,7 @@ class Navbar extends Component {
 
             switch (this.props.animation) {
             // switch (3) {
+                default:
                 case 0:
                     ctx.clearRect(0, 0, CWIDTH, CHEIGHT)
                     this.drawCosineHelix(ctx, t, CWIDTH, CHEIGHT)

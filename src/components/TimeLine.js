@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 import media from '../media'
-import { BUTTONHOVERCOLOR, FONTCOLOR } from '../Colors';
+import {  FONTCOLOR } from '../Colors';
 import Link from './Link'
 
 export default function () {
@@ -21,16 +21,17 @@ export default function () {
                 <Content >
                     <h2><Link href={thesisLink} >Recommendation Systems Thesis</Link> | 2019</h2>
                     <div>
-                        Thesis about <b>Recommendation Systems</b>. In this thesis a deep evaluation of a collaborative filtering method, conten-based method and hybrid approach has been carry out.
-                        </div>
+                        Evaluation of a <b>collaborative filtering</b> method, <b>conten-based</b> method and hybrid approach applied to musical artist recommendation.
+                    </div>
                 </Content>
             </ContainerLeft>
             <ContainerRight >
                 <Content >
                     <h2><Link href={botLink}> @dailyWord_bot</Link> | 2018</h2>
                     <div>
-                        Telegram Bot to help Spanish speakers learn German & vice-versa developed using <b>Node.js</b> and <b>Redis</b>.
-                        <p>Deployed using <b>Cloud Computing</b> techniques with <b>Docker</b> as a container platform.</p>
+                        Telegram Bot to help Spanish speakers learn German & vice-versa.
+                        <p>
+                        Developed using <b>Node.js</b> and <b>Redis</b> & deployed using <b>Cloud Computing</b> techniques with <b>Docker</b> as a container platform.</p>
                     </div>
 
                 </Content>
@@ -38,7 +39,7 @@ export default function () {
             <ContainerLeft >
                 <Content >
                     <h2><Link href={visualsLink}>"In the Universe" visuals</Link> | 2018</h2>
-                    <p> Lyric visuals for the videoclip of "In the Universe" song. The visuals were developed using Javascript's canvas with the challenge of synchronizing the audio, lyrics and visual effects.
+                    <p> Lyric visuals for the videoclip of <i>"In the Universe"</i> song. The visuals were developed using Javascript's canvas with the challenge of synchronizing the audio, lyrics and visual effects.
                         </p>
                     <StyledIframe
                         src={'https://www.youtube.com/embed/jMQ0V9Dbbyg'}
