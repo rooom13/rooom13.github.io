@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
 import media from '../../media'
+import {SECONDARYCOLOR} from '../../Colors'
 
 class Navbar extends Component {
 
@@ -56,7 +57,7 @@ class Navbar extends Component {
 
         for (let i = 0; i < 200; ++i) {
 
-            const color = i % 2 ? 'white' : 'blue';
+            const color = i % 2 ? 'white' : SECONDARYCOLOR;
             ctx.fillStyle = color
             let y = this.cosineY(amplitude * i, t, angularSpeed, i)
             ctx.fillRect(i * gap, CHEIGHT / 2 + y, size, size)

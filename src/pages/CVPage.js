@@ -3,15 +3,13 @@ import styled from 'styled-components'
 import Link from '../components/Link'
 import CVen_path from '../CV/CV_RomanRey_en.pdf'
 import media from '../media';
-import { BUTTONHOVERCOLOR, BUTTONACTIVECOLOR } from '../Colors';
+import { BUTTONHOVERCOLOR, BUTTONACTIVECOLOR, SECONDARYCOLOR } from '../Colors';
+import Emoji from '../components/Emoji';
 
 function CVPage() {
   return (
-
     <Wrapper >
-
       <PDFmessage>Check and download a <b>PDF version</b> of my CV <Link href={CVen_path} target="_blank" >here!</Link></PDFmessage>
-
       <h3>Skills</h3>
       <Skills >
         <SkillLine >
@@ -47,31 +45,30 @@ function CVPage() {
       <h3>Languages (4) </h3>
       <Languages>
         <Lan>
-        <span role='img' aria-label='Great Britain flag'>🇬🇧</span>
+          <Flag symbol='🇬🇧' label='Great Britain flag' />
           <div>English</div>
         </Lan>
         <Lan>
-        <span role='img' aria-label='German flag'>🇩🇪</span>
+          <Flag symbol='🇩🇪' label='German flag' />
           <div>German</div>
         </Lan>
-
         <Lan>
-        <span role='img' aria-label='Spanish flag'>🇪🇸</span>
+          <Flag symbol='🇪🇸' label='Spanish flag' />
           <div>Spanish</div>
         </Lan>
         <Lan>
-          <span  role='img' aria-label='flag'>🏴󠁥󠁳󠁣󠁴󠁿</span>
+          <Flag symbol='🏴󠁥󠁳󠁣󠁴󠁿' label='Catalan flag' title="Couldn't find a catalan flag Emoji :S" />
           <div>Catalan</div>
-
         </Lan>
-
       </Languages>
-
-
     </Wrapper>
-
   )
 }
+
+const Flag = styled(Emoji)`
+  font-size: 2rem;
+  color: red;
+`
 
 const Lan = styled.span`
   display: flex;
@@ -81,7 +78,7 @@ const Lan = styled.span`
 `
 
 const H4 = styled.h4`
-  color: #0a845c;
+  color: ${SECONDARYCOLOR};
   border-bottom: 1px solid ${BUTTONHOVERCOLOR};
   margin: 0.6rem 0;
   ${media.tablet`
@@ -96,11 +93,10 @@ const PDFmessage = styled.div`
 const Languages = styled.div`
   display: flex;
   justify-content: space-evenly;
-
 `
-const Skills = styled.div`
 
-`
+const Skills = styled.div``
+
 const SkillLine = styled.div`
   display: flex;
   flex-direction: column;
@@ -112,7 +108,6 @@ const SkillLine = styled.div`
   `}
 `
 
-
 const Skill = styled.div`
 
   border-left: 1px solid ${BUTTONACTIVECOLOR};
@@ -123,10 +118,7 @@ const Skill = styled.div`
   `}
 `
 
-
 const Wrapper = styled.div`
   line-height: 1.5;
   `
-
-
 export default CVPage

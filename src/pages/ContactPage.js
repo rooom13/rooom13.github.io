@@ -14,8 +14,6 @@ export default function ContactPage() {
   const githubClass = "fa fa-github fa-4x"
 
   return (
-
-
     
     <Wrapper>
       <p>Let's have a talk!</p>
