@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 import media from '../media'
-import {  FONTCOLOR } from '../Colors';
+import {  FONTCOLOR, SECONDARYCOLOR } from '../Colors';
 import Link from './Link'
 
 export default function () {
@@ -121,7 +121,7 @@ const Container = styled.div`
         height: 1.5rem;
         right: -1rem;
         background-color: ${FONTCOLOR};
-        border: 4px solid darkred;
+        border: 4px solid ${SECONDARYCOLOR};
         top: 15px;
         border-radius: 50%;
         z-index: 1;

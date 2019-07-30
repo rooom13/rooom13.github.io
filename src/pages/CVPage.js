@@ -35,7 +35,7 @@ function CVPage() {
             <H4>Database Management</H4>
             SQL & NoSQL, MySQL, Redis, MongoDB
           </Skill >
-          <Skill >
+          <Skill hideMobile>
             <H4>Coming soon ...</H4>
             Always learning
           </Skill >
@@ -110,11 +110,18 @@ const SkillLine = styled.div`
 
 const Skill = styled.div`
 
+  ${props => props.hideMobile && `
+    display: none;
+  `};
+
   border-left: 1px solid ${BUTTONACTIVECOLOR};
   border-bottom: 1px solid ${BUTTONACTIVECOLOR};
   border-radius 5px;
+
+
   ${media.tablet`
-  padding: 0.5rem;
+    padding: 0.5rem;
+    display: unset;
   `}
 `
 

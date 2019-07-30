@@ -18,7 +18,7 @@ function IntroductionPage() {
                     Natural Language Processing, Computer Vision and Artificial Intelligence  
                     <Emoji  symbol=' 🤖' label='robot'/></CoolTopic></span>
                 <p>I as well have a developer soul wich encourages me to be a self learner and carry out my personal projects to discover new paths.</p>
-          <div><i><b>*** Please note that I'm still developing this website <Emoji symbol='🔜' label='coming soon' /> *** </b></i></div>
+          {/* <div><i><b>*** Please note that I'm still developing this website <Emoji symbol='🔜' label='coming soon' /> *** </b></i></div> */}
             </span>
             {<ProfilePicTablet isNotMobile src={profilePicPath} />}
         </Wrapper>
