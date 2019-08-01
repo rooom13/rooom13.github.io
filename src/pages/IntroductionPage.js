@@ -14,9 +14,9 @@ function IntroductionPage() {
                 </ProfilePicMobileWrapper>
                 <div> I'm <BigName>Román Rey Pedrero</BigName></div>
                 <span>a computer science & engineering student from Barcelona based in Munich who loves all the 
-                  science behind <CoolTopic>Cognitive Systems</CoolTopic> such as <CoolTopic>Machine Learning, 
+                  science behind Cognitive Systems such as Machine Learning, 
                     Natural Language Processing, Computer Vision and Artificial Intelligence  
-                    <Emoji  symbol=' 🤖' label='robot'/></CoolTopic></span>
+                    <Emoji  symbol=' 🤖' label='robot'/></span>
                 <p>I as well have a developer soul wich encourages me to be a self learner and carry out my personal projects to discover new paths.</p>
           {/* <div><i><b>*** Please note that I'm still developing this website <Emoji symbol='🔜' label='coming soon' /> *** </b></i></div> */}
             </span>
@@ -60,7 +60,7 @@ const ProfilePicTablet = styled.img`
   ${media.tablet`
     display: block;
     width: 16rem;
-    heihgt: 16rem;
+    height: 16rem;
     border-radius: 50%; 
     padding: 0.5rem;
     border: 1px solid;
