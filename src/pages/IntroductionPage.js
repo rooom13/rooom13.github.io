@@ -13,11 +13,11 @@ function IntroductionPage() {
                     <ProfilePicMobile src={profilePicPath} />
                 </ProfilePicMobileWrapper>
                 <div> I'm <BigName>Román Rey Pedrero</BigName></div>
-                <span>a computer science & engineering student from Barcelona based in Munich who loves all the 
+                <span>a Data Scientist from Barcelona based in Munich who loves all the 
                   science behind Cognitive Systems such as Machine Learning, 
                     Natural Language Processing, Computer Vision and Artificial Intelligence  
                     <Emoji  symbol=' 🤖' label='robot'/></span>
-                <p>I as well have a developer soul wich encourages me to be a self learner and carry out my personal projects to discover new paths.</p>
+                <p>I have as well background and experience in Software Engineering topics.</p><p> Check my portfolio! <Emoji symbol='🙌' label='hands clapping'></Emoji></p>
           {/* <div><i><b>*** Please note that I'm still developing this website <Emoji symbol='🔜' label='coming soon' /> *** </b></i></div> */}
             </span>
             {<ProfilePicTablet isNotMobile src={profilePicPath} />}
