@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 import media from '../media'
-import {  FONTCOLOR, SECONDARYCOLOR } from '../Colors';
+import { FONTCOLOR, SECONDARYCOLOR } from '../Colors';
 import Link from './Link'
 
 export default function () {
@@ -19,21 +19,21 @@ export default function () {
         <Timeline >
             <ContainerLeft >
                 <Content >
-                    <h2><Link href={thesisLink} >Recommendation Systems Thesis</Link> | 2019</h2>
+                    <h2><Link href={botLink}> @dailyWord_bot</Link> | 2018 - {new Date().getFullYear()}</h2>
                     <div>
-                        Evaluation of a <b>collaborative filtering</b> method, <b>conten-based</b> method and hybrid approach applied to musical artist recommendation.
+                        Telegram Bot to help expanding Germand/Spanish vocabulary.
+                        <p>
+                            Developed using <b>Python</b> and <b>Redis</b> & deployed using <b>Cloud Computing</b> techniques with <b>Docker</b> as a container platform.</p>
                     </div>
+
                 </Content>
             </ContainerLeft>
             <ContainerRight >
                 <Content >
-                    <h2><Link href={botLink}> @dailyWord_bot</Link> | 2018</h2>
+                    <h2><Link href={thesisLink} >Recommendation Systems Thesis</Link> | 2019</h2>
                     <div>
-                        Telegram Bot to help Spanish speakers learn German & vice-versa.
-                        <p>
-                        Developed using <b>Node.js</b> and <b>Redis</b> & deployed using <b>Cloud Computing</b> techniques with <b>Docker</b> as a container platform.</p>
+                        Evaluation of a <b>collaborative filtering</b> method, <b>conten-based</b> method and hybrid approach applied to musical artist recommendation.
                     </div>
-
                 </Content>
             </ContainerRight>
             <ContainerLeft >
@@ -80,7 +80,7 @@ export default function () {
 }
 
 
-const StyledIframe=styled.iframe`
+const StyledIframe = styled.iframe`
     border-radius: 5px;
     width: 100%;
 `

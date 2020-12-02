@@ -7,37 +7,44 @@ import { BUTTONHOVERCOLOR, BUTTONACTIVECOLOR, SECONDARYCOLOR } from '../Colors';
 import Emoji from '../components/Emoji';
 
 function CVPage() {
+  const linkedinLink = "https://www.linkedin.com/in/roman-rey"
+
   return (
     <Wrapper >
-      <PDFmessage>Check and download a <b>PDF version</b> of my CV <Link href={CVen_path} target="_blank" >here!</Link></PDFmessage>
+      {/* <PDFmessage>Check and download a <b>PDF version</b> of my CV <Link href={CVen_path} target="_blank" >here!</Link></PDFmessage> */}
+      <PDFmessage>Check it on LinkedIn <Link href={linkedinLink} target="_blank" >here!</Link></PDFmessage>
       <h3>Skills</h3>
       <Skills >
         <SkillLine >
           <Skill >
-            <H4>Machine Learning & Data Mining</H4>
-            Python, Sklearn, Pandas, TensorFlow - Keras
+            <H4>Data Science</H4>
+            Anomaly detection, False positive reduction<br /> (Un)Supervised learning, Sklearn, Pandas, TensorFlow/Pytorch
+        </Skill >
+          <Skill >
+            <H4>Data Engineering</H4>
+            Datalake management, Athena, parallel processing, Kafka 
         </Skill >
           <Skill >
             <H4>Cloud Computing</H4>
-            Docker, AWS
-        </Skill >
-          <Skill >
-            <H4>Software Engineering</H4>
-            Software Design, Object oriented, C++, Java
+            Docker, Kubernetes, AWS
         </Skill >
         </SkillLine>
         <SkillLine>
+          <Skill >
+            <H4>Software Engineering</H4>
+            Software Design, OOP, python, testing CI/CD, Java
+        </Skill >
           <Skill >
             <H4>Web Development</H4>
             Node.js, HTML, Javascript, CSS, React.js
           </Skill >
           <Skill >
             <H4>Database Management</H4>
-            SQL & NoSQL, MySQL, Redis, MongoDB
+            SQL & NoSQL, MySQL, Redis, MongoDB, ElasticSearh
           </Skill >
           <Skill hideMobile>
             <H4>Coming soon ...</H4>
-            Always learning
+            Who knows what I will come with
           </Skill >
         </SkillLine>
       </Skills>

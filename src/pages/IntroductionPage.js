@@ -5,24 +5,25 @@ import media from '../media'
 import Emoji from '../components/Emoji'
 
 function IntroductionPage() {
-    return (
-        <Wrapper id="introduction">
-            <span>
-                <div >Hi there!</div>
-                <ProfilePicMobileWrapper>
-                    <ProfilePicMobile src={profilePicPath} />
-                </ProfilePicMobileWrapper>
-                <div> I'm <BigName>Román Rey Pedrero</BigName></div>
-                <span>a Data Scientist from Barcelona based in Munich who loves all the 
-                  science behind Cognitive Systems such as Machine Learning, 
-                    Natural Language Processing, Computer Vision and Artificial Intelligence  
-                    <Emoji  symbol=' 🤖' label='robot'/></span>
-                <p>I have as well background and experience in Software Engineering topics.</p><p> Check my portfolio! <Emoji symbol='🙌' label='hands clapping'></Emoji></p>
-          {/* <div><i><b>*** Please note that I'm still developing this website <Emoji symbol='🔜' label='coming soon' /> *** </b></i></div> */}
-            </span>
-            {<ProfilePicTablet isNotMobile src={profilePicPath} />}
-        </Wrapper>
-    )
+  return (
+    <Wrapper id="introduction">
+      <span>
+        <div >Hi there!</div>
+        <ProfilePicMobileWrapper>
+          <ProfilePicMobile src={profilePicPath} />
+        </ProfilePicMobileWrapper>
+        <div> I'm <BigName>Román Rey Pedrero</BigName></div>
+        an AI engineer from Barcelona based in Munich who loves all the
+        science behind Cognitive Systems.
+        <p>Since I was a kid I was asking myself what kind of black magic was going on behind such boxes called computers (when they used to be boxes). Many years later I keep turning black magic into science.
+                    <Emoji symbol=' 🤖' label='robot' /></p>
+        {/* <p>I have as well background and experience in Software Engineering topics.</p>*/}
+        <p> Check my portfolio! <Emoji symbol='🙌' label='hands clapping'></Emoji></p>
+        {/* <div><i><b>*** Please note that I'm still developing this website <Emoji symbol='🔜' label='coming soon' /> *** </b></i></div> */}
+      </span>
+      {<ProfilePicTablet isNotMobile src={profilePicPath} />}
+    </Wrapper>
+  )
 }
 
 const CoolTopic = styled.span`
