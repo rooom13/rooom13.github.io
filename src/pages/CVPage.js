@@ -81,7 +81,6 @@ const Lan = styled.span`
   display: flex;
   flex-direction: column;
   align-items: center;
-
 `
 
 const H4 = styled.h4`

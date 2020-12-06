@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components'
 import media from '../../media'
 import Animation from './Animation'
@@ -6,30 +7,29 @@ import { FONTCOLOR, BUTTONCOLOR, BACKGROUNDCOLOR } from '../../Colors';
 
 class Navbar extends Component {
 
-
   state = {
-    animation: Math.floor(Math.random()*(3))
+    animation: Math.floor(Math.random() * 5)
   }
-  componentDidMount(){
-
-  }
-
 
   render() {
 
-    const { isIntroductionShown, isContactShown, isPortfolioShown, isCVShown, showIntroduction, showContact, showCv, showPortfolio } = this.props
-    const {animation} = this.state
+    const { animation } = this.state
+
+    const activeStyle = {
+      fontStyle: "italic",
+      borderBottom: `2px solid ${BUTTONCOLOR}`
+    }
 
     return (
       <Wrapper>
         <Animation animation={animation} id='left' />
         <StyledNav>
-          <NavItem isSelected={isIntroductionShown} onClick={showIntroduction}>Who I am</NavItem>
-          <NavItem isSelected={isCVShown} onClick={showCv}>CV</NavItem>
-          <NavItem isSelected={isPortfolioShown} onClick={showPortfolio}>Portfolio</NavItem>
-          <NavItem isSelected={isContactShown} onClick={showContact}>Contact</NavItem>
+          <StyledNavLink activeStyle={activeStyle} exact to="/">Who I am</StyledNavLink>
+          <StyledNavLink activeStyle={activeStyle} to="/cv">CV</StyledNavLink>
+          <StyledNavLink activeStyle={activeStyle} to="/portfolio">Portfolio</StyledNavLink>
+          <StyledNavLink activeStyle={activeStyle} to="/contact">Contact</StyledNavLink>
         </StyledNav>
-        <Animation animation={animation} inverted id='right'/>
+        <Animation animation={animation} inverted id='right' />
       </Wrapper>
     )
   }
@@ -54,21 +54,17 @@ ${media.tablet`
   justify-content: center;
 `
 
-const NavItem = styled.div`
+const StyledNavLink = styled(NavLink)`
   cursor:pointer;
   padding: 0.8rem;
   font-size: 1.2rem;
-   border-bottom: 2px solid ${BACKGROUNDCOLOR};
+  border-bottom: 2px solid ${BACKGROUNDCOLOR};
+  text-decoration: none; 
 
-  
-  ${(props) => props.isSelected && `
-    font-style: italic;
-    border-bottom: 2px solid ${BUTTONCOLOR};
-  `};
+  color: unset;
+
   &:hover {
     border-bottom: 2px solid ${FONTCOLOR};
-  }
-
   }
 `
 

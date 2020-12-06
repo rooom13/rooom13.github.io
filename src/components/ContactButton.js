@@ -9,14 +9,11 @@ export default function ContactButton(props) {
     const linkText = props.children
 
     return (
-
         <Wrapper>
-
             <StyledButton href={link}>
                 <i className={iconClass} aria-hidden="true"></i>
             </StyledButton>
             <LinkText href={link}>  {linkText}</LinkText>
-
         </Wrapper>
     )
 }
@@ -41,7 +38,6 @@ const StyledButton = styled.a`
     }
 
     border-radius: 25px;
-
     text-decoration: none; 
     decoration: none; 
 
@@ -49,15 +45,11 @@ const StyledButton = styled.a`
     margin-bottom: 0.5rem;
     width: 7rem;
     height: 7rem;
-  
-
-  
 `
 
 const Wrapper = styled.div`
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-
-  `
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+`
