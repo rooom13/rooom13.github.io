@@ -7,7 +7,9 @@ import Link from './Link'
 export default function () {
 
     const thesisLink = 'https://github.com/rooom13/recommendation-system-thesis'
-    const botLink = 'https://github.com/rooom13/deutschlerne_bot'
+    const dailyWordBotLink = 'https://github.com/rooom13/deutschlerne_bot'
+    const topTweetsBotLink = 'https://telegram.me/top_tweets_bot'
+    const samplesLooperLink = 'http://samples-looper.herokuapp.com'
     const visualsLink = 'https://www.youtube.com/watch?v=jMQ0V9Dbbyg'
     const runnerLink = 'http://www.genmagic.org/videojuegos/mates/mathicrunner'
     const platformerLink = 'http://genmagic.org/videojuegos/mates/mathicplatformer1'
@@ -19,7 +21,29 @@ export default function () {
         <Timeline >
             <ContainerLeft >
                 <Content >
-                    <h2><Link href={botLink}> @dailyWord_bot</Link> | 2018 - {new Date().getFullYear()}</h2>
+                    <h2><Link href={topTweetsBotLink}> @hot_tweets_bot</Link> | 2021 - {new Date().getFullYear()}</h2>
+                    <div>
+                        Investment psychology in a connected society can be reflected on people's most popular thoughts. hot_tweets_bot provides the top tweets of topics of your choice to make you stay up to date with the latest announcements.
+                        <p>
+                            The bot connects to the Twitter API to retrieve the most significant tweets.</p>
+                    </div>
+                </Content>
+            </ContainerLeft>
+            <ContainerRight >
+                <Content >
+                    <h2><Link href={samplesLooperLink}> Samples Looper</Link> | 2020 </h2>
+                    <div>
+                        I wanted to experiment with the Web Audio API and what best to develop a web app for mixing samples.
+                        The app allows you to load a set of samples and play them along.
+                        <p>
+                            The app can be controlled with the keyboard since mixing needs changing settings quite fast, which might not be so comfortable using the cursor.
+                        </p>
+                    </div>
+                </Content>
+            </ContainerRight>
+            <ContainerLeft >
+                <Content >
+                    <h2><Link href={dailyWordBotLink}> @dailyWord_bot</Link> | 2018 - {new Date().getFullYear()}</h2>
                     <div>
                         Telegram Bot to help expanding Germand/Spanish vocabulary.
                         <p>
@@ -40,7 +64,7 @@ export default function () {
                 <Content >
                     <h2><Link href={visualsLink}>"In the Universe" visuals</Link> | 2018</h2>
                     <p> Lyric visuals for the videoclip of <i>"In the Universe"</i> song. The visuals were developed using Javascript's canvas with the challenge of synchronizing the audio, lyrics and visual effects.
-                        </p>
+                    </p>
                     <StyledIframe
                         src={'https://www.youtube.com/embed/jMQ0V9Dbbyg'}
                         frameborder="0"
@@ -59,14 +83,14 @@ export default function () {
                 <Content >
                     <h2><Link href={platformerLink}>Mathic Platformer</Link> | 2013</h2>
                     <p>Web app videogame for a research project that approaches education and gamification.
-                        </p>
+                    </p>
                 </Content>
             </ContainerLeft>
             <ContainerRight >
                 <Content >
                     <h2><Link href={animationsLink}>Animations</Link> | Long time ago</h2>
                     <p> At an early age I spent my time doing animations using <b>Adobe Flash</b>.
-                    <StyledIframe
+                        <StyledIframe
                             src="https://www.youtube.com/embed/videoseries?list=PLZIKq90MlT8IbjRKOPOjL2AZSRRrWApLI"
                             frameborder="0"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -75,7 +99,7 @@ export default function () {
                     </p>
                 </Content>
             </ContainerRight>
-        </Timeline>
+        </Timeline >
     )
 }
 

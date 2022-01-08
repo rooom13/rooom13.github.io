@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
-import profilePicPath from '../images/profile.png'
+import profilePicPath from '../images/profile.jpg'
 import media from '../media'
 import Emoji from '../components/Emoji'
 

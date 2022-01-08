@@ -48,6 +48,7 @@ const ContentWrapper = styled.div`
 
 const Wrapper = styled.div`
   color: ${FONTCOLOR};
+  font-size: 1.25rem;
 `
 
 export default App;
