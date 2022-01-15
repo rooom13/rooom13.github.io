@@ -38,7 +38,7 @@ export default function () {
                         I wanted to experiment with the Web Audio API so I developed a web app for mixing samples.
                         The app allows you to load a set of samples and play them along.
                         <a target="blank" href={samplesLooperLink}><StyledImage src={samplesLooperPicPath} /></a>
-                        <p>The app can be controlled with the keyboard since mixing needs changing settings quite fast, which might not be so comfortable using the cursor.</p>
+                        <p>The app can be controlled with the keyboard since mixing needs changing settings quite fast, which might not be so comfortable using the mouse.</p>
                     </div>
                 </Content>
             </ContainerRight>
@@ -56,7 +56,7 @@ export default function () {
                 <Content >
                     <h2><Link target="blank" href={thesisLink} >Recommendation Systems Thesis</Link> | 2019</h2>
                     <div>
-                        Evaluation of a <b>collaborative filtering</b> method, <b>conten-based</b> method and hybrid approach applied to musical artist recommendation.
+                        Evaluation of a <b>collaborative filtering</b> method, <b>content-based</b> method and hybrid approach applied to musical artist recommendation.
                     </div>
                 </Content>
             </ContainerRight>
@@ -75,7 +75,7 @@ export default function () {
             <ContainerRight >
                 <Content >
                     <h2> <Link target="blank" href={runnerLink}>Mathic Runner</Link> | 2014</h2>
-                    <p>Web responsive videogame developed for <i>genmagic.net</i>an educational platform of research and development of interactive applications.</p>
+                    <p>Web responsive videogame developed for <i>genmagic.net</i> an educational platform of research and development of interactive applications.</p>
                     <a target="blank" href={runnerLink}><StyledImage src={mathicRunnerPicPath} /></a>
                 </Content>
             </ContainerRight>
