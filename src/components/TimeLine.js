@@ -12,7 +12,7 @@ export default function () {
     const thesisLink = 'https://github.com/rooom13/recommendation-system-thesis'
     const dailyWordBotLink = 'https://github.com/rooom13/deutschlerne_bot'
     const topTweetsBotLink = 'https://telegram.me/top_tweets_bot'
-    const samplesLooperLink = 'http://samples-looper.herokuapp.com'
+    const samplesLooperLink = 'http://rooom13.github.io/samples-looper'
     const visualsLink = 'https://www.youtube.com/watch?v=jMQ0V9Dbbyg'
     const runnerLink = 'http://www.genmagic.org/videojuegos/mates/mathicrunner'
     const platformerLink = 'http://genmagic.org/videojuegos/mates/mathicplatformer1'
